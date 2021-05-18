@@ -21,15 +21,18 @@ public class BallController : MonoBehaviour {
     public Vector3 lineSize;
     public LineRenderer line;
     public int maxForce;
+    public int minForce;
 
     void Start()
     {
         speed = 100;
-        maxForce = 5;
+        maxForce = 6;
+        minForce = -4;
         moveVertical = 0;
         turn = false;
         playing = true;
         rb = GetComponent<Rigidbody>();
+        rb.mass = 5;
         lineSize = new Vector3(10.0f, 0.0f, 0.0f);
         playerPosition = rb.transform.position;
         endLine = playerPosition + lineSize;
@@ -60,10 +63,14 @@ public class BallController : MonoBehaviour {
 
             endLine = playerPosition + lineSize;
             moveVertical += Input.GetAxis("Vertical");
-
+            Debug.Log( moveVertical);
             if (moveVertical >= maxForce)
             {
                 moveVertical = maxForce;
+            }
+            else if(moveVertical <= minForce)
+            {
+                moveVertical = minForce;
             }
 
             endLine += lineSize.normalized * moveVertical;

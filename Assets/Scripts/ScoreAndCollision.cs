@@ -66,6 +66,6 @@ public class ScoreAndCollision : MonoBehaviour {
     }
 
     public void returnMenu() {
-        Application.LoadLevel("SampleScene");
+        Application.LoadLevel("billard");
     }
 }

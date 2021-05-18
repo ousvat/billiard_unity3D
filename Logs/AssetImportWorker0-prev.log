@@ -1,0 +1,199 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.8f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/ovidiu/facultate/sm/proiect/billiard_unity
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49912
+Successfully changed project path to: /Users/ovidiu/facultate/sm/proiect/billiard_unity
+/Users/ovidiu/facultate/sm/proiect/billiard_unity
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.8f1 (507919d4fff5)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.8f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/ovidiu/facultate/sm/proiect/billiard_unity/Assets
+GfxDevice: creating device client; threaded=0
+2021-05-13 12:13:52.937 Unity[2460:66231] Color LCD preferred device: AMD Radeon Pro 5300M (high power)
+2021-05-13 12:13:52.937 Unity[2460:66231] Metal devices available: 2
+2021-05-13 12:13:52.937 Unity[2460:66231] 0: AMD Radeon Pro 5300M (high power)
+2021-05-13 12:13:52.937 Unity[2460:66231] 1: Intel(R) UHD Graphics 630 (low power)
+2021-05-13 12:13:52.937 Unity[2460:66231] Using device AMD Radeon Pro 5300M (high power)
+Initializing Metal device caps: AMD Radeon Pro 5300M
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.8f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.8f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.8f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56460
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.8f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.001402 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 45.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.320 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003454 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.173 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.8f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1660 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.7 MB.
+System memory in use after: 128.8 MB.
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 2074.
+Total: 5.421822 ms (FindLiveObjects: 0.192645 ms CreateObjectMapping: 0.069102 ms MarkObjects: 5.078867 ms  DeleteObjects: 0.079719 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/billard.unity
+  artifactKey: Guid(687952a38eb8740a59eb91a27110c676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/billard.unity using Guid(687952a38eb8740a59eb91a27110c676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb57dce6429b6e6a60ffb009f19cb7a') in 0.012655 seconds
+  Import took 0.016541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 127.479691 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6a70ab523f3368c6fa1847ebc56869a') in 0.001033 seconds
+  Import took 0.003793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014103 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6a70ab523f3368c6fa1847ebc56869a') in 0.000999 seconds
+  Import took 0.004063 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003792 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.278 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1654 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 128.7 MB.
+System memory in use after: 128.8 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2077.
+Total: 4.532477 ms (FindLiveObjects: 0.154138 ms CreateObjectMapping: 0.047772 ms MarkObjects: 4.305533 ms  DeleteObjects: 0.024217 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 392.737632 seconds.
+  path: Packages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs
+  artifactKey: Guid(1511ccae7919cfc46b603b9b337fdc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInput.cs using Guid(1511ccae7919cfc46b603b9b337fdc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb653d35cc576b8263587eee54f110e') in 1.304292 seconds
+  Import took 1.308032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.822139 seconds.
+  path: Packages/com.unity.ugui/Runtime/EventSystem/InputModules/TouchInputModule.cs
+  artifactKey: Guid(2d49b7c1bcd2e07499844da127be038d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Runtime/EventSystem/InputModules/TouchInputModule.cs using Guid(2d49b7c1bcd2e07499844da127be038d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13c256a12c8cfdcdb2588b761940e54a') in 0.001710 seconds
+  Import took 0.005340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002036 seconds.
+  path: Packages/com.unity.ugui/Runtime/EventSystem/InputModules/TouchInputModule.cs
+  artifactKey: Guid(2d49b7c1bcd2e07499844da127be038d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Runtime/EventSystem/InputModules/TouchInputModule.cs using Guid(2d49b7c1bcd2e07499844da127be038d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13c256a12c8cfdcdb2588b761940e54a') in 0.001638 seconds
+  Import took 0.004621 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001100 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.943 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1654 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 133.2 MB.
+System memory in use after: 133.3 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2080.
+Total: 4.246064 ms (FindLiveObjects: 0.162098 ms CreateObjectMapping: 0.049218 ms MarkObjects: 4.017261 ms  DeleteObjects: 0.016722 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 110.695369 seconds.
+  path: Packages/com.unity.ugui/Runtime/EventSystem/InputModules/PointerInputModule.cs
+  artifactKey: Guid(cbab8835092323a4389f2dc7d8f6c781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Runtime/EventSystem/InputModules/PointerInputModule.cs using Guid(cbab8835092323a4389f2dc7d8f6c781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '728a85c3b870f34359d425b99e7f7608') in 0.004134 seconds
+  Import took 0.007060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.318674 seconds.
+  path: Packages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInputModule.cs
+  artifactKey: Guid(1ea10891dd782154ca0fb67bce9e6f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInputModule.cs using Guid(1ea10891dd782154ca0fb67bce9e6f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0a6e237607412f2b49693bd9fe6256d') in 0.001751 seconds
+  Import took 0.005428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000542 seconds.
+  path: Packages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInputModule.cs
+  artifactKey: Guid(1ea10891dd782154ca0fb67bce9e6f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ugui/Runtime/EventSystem/InputModules/BaseInputModule.cs using Guid(1ea10891dd782154ca0fb67bce9e6f72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0a6e237607412f2b49693bd9fe6256d') in 0.001762 seconds
+  Import took 0.004344 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003465 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.199 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1654 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 133.4 MB.
+System memory in use after: 133.6 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2083.
+Total: 4.319340 ms (FindLiveObjects: 0.147908 ms CreateObjectMapping: 0.055554 ms MarkObjects: 4.098625 ms  DeleteObjects: 0.016496 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
