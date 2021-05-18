@@ -22,10 +22,11 @@ public class BallController : MonoBehaviour {
     public LineRenderer line;
     public int maxForce;
     public int minForce;
+    public bool changePlayer;
 
     void Start()
     {
-        speed = 100;
+        speed = 1000;
         maxForce = 6;
         minForce = -4;
         moveVertical = 0;
@@ -42,13 +43,22 @@ public class BallController : MonoBehaviour {
         player2Text.text = "Player 2 (half_full) : 0";
         player1ExternText = player1Text;
         player2ExternText = player2Text;
+        changePlayer = false;
     }
 
     void FixedUpdate()
     {
         if (playing) {
+            stopBalls();
             playerPosition = rb.transform.position;
 
+            /// Stop if the speed is too low
+            if(rb.velocity.magnitude < 2)
+            {
+                rb.velocity = Vector3.zero;
+            }
+            
+            /// Change the direction
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 Quaternion rotate = Quaternion.Euler(0, -2, 0);
@@ -61,9 +71,10 @@ public class BallController : MonoBehaviour {
                 lineSize = rotate * lineSize;
             }
 
+            /// Ajust the speed
             endLine = playerPosition + lineSize;
             moveVertical += Input.GetAxis("Vertical");
-            Debug.Log( moveVertical);
+            
             if (moveVertical >= maxForce)
             {
                 moveVertical = maxForce;
@@ -77,7 +88,7 @@ public class BallController : MonoBehaviour {
             line.SetPosition(0, playerPosition);
             line.SetPosition(1, endLine);
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space) && !isMoving())
             {
                 rb.AddForce((endLine - playerPosition) * speed);
                 turn = !turn;
@@ -97,6 +108,59 @@ public class BallController : MonoBehaviour {
             {
                 rb.transform.position = new Vector3(-23f, 25.95059f, 0f);
             }
+
+            
         }
+    }
+
+    /// Return true if any of the balls is moving.
+    bool isMoving()
+    {
+        bool response = false;
+        for(int i = 0; i<16; ++i)
+        {
+            GameObject go = GameObject.Find($"Ball ({i})");
+            if(go is null) continue;
+
+            Rigidbody rb = go.GetComponent<Rigidbody>();
+            
+            if(rb.velocity.magnitude > 0)
+            {
+                response = true;
+                Debug.Log($"Ball {i} is moving!");
+            }
+            if(rb.velocity.magnitude < 3)
+            {
+                rb.velocity = Vector3.zero;
+            }
+        }
+
+        return response;
+    }
+
+    void stopBalls()
+    {
+        for(int i = 0; i<16; ++i)
+        {
+            GameObject go = GameObject.Find($"Ball ({i})");
+            if(go is null) continue;
+
+            Rigidbody rb = go.GetComponent<Rigidbody>();
+            
+            if(rb.velocity.magnitude < 3)
+            {
+                rb.velocity = Vector3.zero;
+                
+            }
+            if(rb.angularVelocity.magnitude < 2)
+            {
+                rb.angularVelocity = Vector3.zero;      
+            }
+            if(rb.angularVelocity.magnitude != 0)
+            {
+                Debug.Log(rb.angularVelocity.magnitude);
+            }
+        }
+        
     }
 }
