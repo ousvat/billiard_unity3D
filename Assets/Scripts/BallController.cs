@@ -26,14 +26,14 @@ public class BallController : MonoBehaviour {
 
     void Start()
     {
-        speed = 1000;
+        speed = 1800;
         maxForce = 6;
         minForce = -4;
         moveVertical = 0;
         turn = false;
         playing = true;
         rb = GetComponent<Rigidbody>();
-        rb.mass = 5;
+        rb.mass = 6;
         lineSize = new Vector3(10.0f, 0.0f, 0.0f);
         playerPosition = rb.transform.position;
         endLine = playerPosition + lineSize;
@@ -138,6 +138,7 @@ public class BallController : MonoBehaviour {
         return response;
     }
 
+    /// Stop all balls moving if the speed is too low
     void stopBalls()
     {
         for(int i = 0; i<16; ++i)
@@ -155,10 +156,6 @@ public class BallController : MonoBehaviour {
             if(rb.angularVelocity.magnitude < 2)
             {
                 rb.angularVelocity = Vector3.zero;      
-            }
-            if(rb.angularVelocity.magnitude != 0)
-            {
-                Debug.Log(rb.angularVelocity.magnitude);
             }
         }
         
