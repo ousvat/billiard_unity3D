@@ -7,10 +7,12 @@ public class BallController : MonoBehaviour {
     public static int score1 = 0;
     public static int score2 = 0;
     public static Rigidbody rb;
-    public static bool turn;
+    public static bool turn = true;
     public static Text player1ExternText;
     public static Text player2ExternText;
     public static bool playing;
+    public static bool changePlayer;
+    public static int ballsIn;
 
 	public Text player1Text;
 	public Text player2Text;
@@ -22,15 +24,13 @@ public class BallController : MonoBehaviour {
     public LineRenderer line;
     public int maxForce;
     public int minForce;
-    public bool changePlayer;
 
     void Start()
     {
-        speed = 1800;
+        speed = 1900;
         maxForce = 6;
         minForce = -4;
         moveVertical = 0;
-        turn = false;
         playing = true;
         rb = GetComponent<Rigidbody>();
         rb.mass = 6;
@@ -40,16 +40,18 @@ public class BallController : MonoBehaviour {
         line = GetComponent<LineRenderer>();
         player1Text.text = "Player 1 (full) : 0";
         player1Text.color = Color.red;
-        player2Text.text = "Player 2 (half_full) : 0";
+        player2Text.text = "Player 2 (half full) : 0";
         player1ExternText = player1Text;
         player2ExternText = player2Text;
         changePlayer = false;
+        ballsIn = -1;
     }
 
     void FixedUpdate()
     {
         if (playing) {
             stopBalls();
+            changeTurn();
             playerPosition = rb.transform.position;
 
             /// Stop if the speed is too low
@@ -90,19 +92,9 @@ public class BallController : MonoBehaviour {
 
             if (Input.GetKey(KeyCode.Space) && !isMoving())
             {
+                changePlayer = false;
+                ballsIn = 0;
                 rb.AddForce((endLine - playerPosition) * speed);
-                turn = !turn;
-
-                if (turn)
-                {
-                    player1Text.color = Color.red;
-                    player2Text.color = Color.white;
-                }
-                else
-                {
-                    player2Text.color = Color.red;
-                    player1Text.color = Color.white;
-                }
             }
             if (Input.GetKey(KeyCode.RightControl))
             {
@@ -127,11 +119,6 @@ public class BallController : MonoBehaviour {
             if(rb.velocity.magnitude > 0)
             {
                 response = true;
-                Debug.Log($"Ball {i} is moving!");
-            }
-            if(rb.velocity.magnitude < 3)
-            {
-                rb.velocity = Vector3.zero;
             }
         }
 
@@ -159,5 +146,30 @@ public class BallController : MonoBehaviour {
             }
         }
         
+    }
+
+    void changeTurn()
+    {
+        if(!isMoving())
+        {
+            if(changePlayer || ballsIn == 0)
+            {
+                turn = !turn;
+                changePlayer = false;
+                ballsIn = -1;
+                if(turn) Debug.Log("Player changed: 1");
+                else Debug.Log("Player changed: 2");
+            }
+            if (turn)
+            {
+                player1Text.color = Color.red;
+                player2Text.color = Color.white;
+            }
+            else
+            {
+                player2Text.color = Color.red;
+                player1Text.color = Color.white;
+            }
+        }
     }
 }
