@@ -148,6 +148,7 @@ public class BallController : MonoBehaviour {
         
     }
 
+    /// Change the [turn] if is the case.
     void changeTurn()
     {
         if(!isMoving())
