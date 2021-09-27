@@ -6,6 +6,6 @@ Simple billiard game with balls and turn management. Blender object imported.
 
 # Contribution
 
-This project is copied from [here.](https://github.com/stevenliatti/billiard_unity)
+This project is copied and updated from [here.](https://github.com/stevenliatti/billiard_unity)
 
 Feel free to fork and make the changes you want.
